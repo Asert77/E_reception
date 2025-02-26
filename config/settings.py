@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 from datetime import timedelta
 
-import pytest
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -162,14 +162,8 @@ REST_FRAMEWORK = {
 }
 
 
-import os
 
-if "test" in os.getenv("DJANGO_SETTINGS_MODULE", ""):
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": ":memory:",
-        }
-    }
+
+
 
 DJANGO_SETTINGS_MODULE = "E_reception.settings"

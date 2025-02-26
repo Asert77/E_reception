@@ -1,9 +1,9 @@
+# 1. Python 3.10 image dan foydalanamiz
 FROM python:3.10
 
 WORKDIR /app
 
-COPY requirements.txt /app/requirements.txt
-
+COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 COPY . /app/
