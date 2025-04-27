@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions, viewsets, filters
 from rest_framework.response import Response
-from .models import Course, Enrollment, Teacher, Timetable, Group
-from .serializers import CourseSerializer, GroupSerializer, EnrollmentSerializer, TeacherSerializer, TimetableSerializer
+from .models import Course, Enrollment, Teacher, Group
+from .serializers import CourseSerializer, GroupSerializer, EnrollmentSerializer, TeacherSerializer
 
 
 class CourseListView(generics.ListAPIView):
@@ -25,12 +25,6 @@ class TeacherView(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
 
-
-
-class TimetableListView(generics.ListAPIView):
-    queryset = Timetable.objects.all()
-    serializer_class = TimetableSerializer
-    permission_classes = [permissions.IsAuthenticated]
 
 
 class GroupListView(generics.ListAPIView):

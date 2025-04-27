@@ -38,16 +38,6 @@ class Enrollment(models.Model):
             return f"{self.student.phone_number} - {self.course.title}"
 
 
-class Timetable(models.Model):
-    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="timetable")
-    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, related_name="timetable")
-    date = models.CharField(max_length=100)
-    start_time = models.TimeField()
-    end_time = models.TimeField()
-
-    def __str__(self):
-        return self.date
-
 
 class Group(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="groups")

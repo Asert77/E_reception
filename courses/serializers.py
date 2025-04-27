@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Course, Enrollment, Teacher, Timetable, Group
+from .models import Course, Enrollment, Teacher,  Group
 
 
 class EnrollmentSerializer(serializers.ModelSerializer):
@@ -14,17 +14,6 @@ class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
         fields = '__all__'
-
-
-
-
-class TimetableSerializer(serializers.ModelSerializer):
-        course = serializers.StringRelatedField()
-        teacher = serializers.StringRelatedField()
-
-        class Meta:
-            model = Timetable
-            fields = ['id', 'course', 'teacher', 'date', 'start_time', 'end_time']
 
 
 class GroupSerializer(serializers.ModelSerializer):
