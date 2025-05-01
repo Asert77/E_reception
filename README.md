@@ -1,6 +1,5 @@
 # E_reception
-E_reception for education centre
-E-Reception
+
 E-Reception — ta'lim markazlari uchun mo'ljallangan onlayn ro'yxatdan o'tish tizimi. Ushbu tizim yordamida foydalanuvchilar kurslarga yozilishlari, mavjud kurslarni ko'rishlari va o'z hisoblarini boshqarishlari mumkin.
 
 📌 Asosiy xususiyatlar
